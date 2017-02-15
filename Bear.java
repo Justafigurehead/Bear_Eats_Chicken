@@ -19,7 +19,7 @@ public class Bear {
 
   public void eat(Edible food){
     belly.add(food);
-  }
+  } 
 
   public void sleep(){
     belly.clear();
@@ -32,4 +32,12 @@ public class Bear {
     return null;
   }
 
-}
+  public int totalNutrition(){
+    int count = 0;
+    for (Edible food : belly){    
+     count += food.nutritionValue();
+          }
+      return count;
+    }
+  }
+
